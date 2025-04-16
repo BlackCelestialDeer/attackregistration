@@ -1,0 +1,86 @@
+@use "sass:list";
+@use "sass:map";
+
+$elevation-opacity: (
+	umbra: 0.2,
+	penumbra: 0.14,
+	ambient: 0.12
+);
+
+$elevation-map: (
+	0: (
+		0px 0px 0px 0px,
+		0px 0px 0px 0px,
+		0px 0px 0px 0px
+	),
+	1: (
+		0px 2px 1px -1px,
+		0px 1px 1px 0px,
+		0px 1px 3px 0px
+	),
+	2: (
+		0px 3px 1px -2px,
+		0px 2px 2px 0px,
+		0px 1px 5px 0px
+	),
+	3: (
+		0px 3px 3px -2px,
+		0px 3px 4px 0px,
+		0px 1px 8px 0px
+	),
+	4: (
+		0px 2px 4px -1px,
+		0px 4px 5px 0px,
+		0px 1px 10px 0px
+	),
+	5: (
+		0px 3px 5px -1px,
+		0px 5px 8px 0px,
+		0px 1px 14px 0px
+	),
+	6: (
+		0px 3px 5px -1px,
+		0px 6px 10px 0px,
+		0px 1px 18px 0px
+	),
+	7: (
+		0px 4px 5px -2px,
+		0px 7px 10px 1px,
+		0px 2px 16px 1px
+	),
+	8: (
+		0px 5px 5px -3px,
+		0px 8px 10px 1px,
+		0px 3px 14px 2px
+	),
+	9: (
+		0px 5px 6px -3px,
+		0px 9px 12px 1px,
+		0px 3px 16px 2px
+	),
+	10: (
+		0px 6px 6px -3px,
+		0px 10px 14px 1px,
+		0px 4px 18px 3px
+	),
+	11: (
+		0px 6px 7px -4px,
+		0px 11px 15px 1px,
+		0px 4px 20px 3px
+	),
+	12: (
+		0px 7px 8px -4px,
+		0px 12px 17px 2px,
+		0px 5px 22px 4px
+	)
+);
+
+@mixin material-elevation($dp) {
+	@if $dp >= 0 and $dp <= 12 {
+		$shadows: map.get($elevation-map, $dp);
+		box-shadow:
+			list.nth($shadows, 1) rgba(0, 0, 0, map.get($elevation-opacity, umbra)),
+			list.nth($shadows, 2) rgba(0, 0, 0, map.get($elevation-opacity, penumbra)),
+			list.nth($shadows, 3) rgba(0, 0, 0, map.get($elevation-opacity, ambient));
+	}
+}

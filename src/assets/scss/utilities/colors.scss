@@ -1,0 +1,70 @@
+html {
+	//* Base colors
+	--cs-color-black: rgb(0, 0, 0);
+	--cs-color-semi-black: rgb(51, 51, 51);
+	--cs-color-darkgrey: rgb(112, 112, 112);
+	--cs-color-grey: rgb(144, 144, 144);
+	--cs-color-lightgrey: rgb(224, 224, 224);
+	--cs-color-semi-white: rgb(248, 248, 248);
+	--cs-color-white: rgb(255, 255, 255);
+
+	--cs-color-transparent: rgba(0, 0, 0, 0);
+	--cs-color-transparent-lighter: rgba(255, 255, 255, 0.6);
+	--cs-color-transparent-light: rgba(255, 255, 255, 0.2);
+	--cs-color-transparent-dark: rgba(0, 0, 0, 0.2);
+	--cs-color-transparent-darker: rgba(0, 0, 0, 0.6);
+	--cs-context-background-color: rgba(245, 245, 245, 0.85);
+
+	--cs-color-primary: rgb(0, 73, 144);
+	--cs-color-secondary: rgb(245, 121, 19);
+	--cs-color-success: rgb(12, 134, 78);
+	--cs-color-danger: rgb(213, 40, 38);
+	--cs-color-info: rgb(22, 120, 185);
+	--cs-color-warning: rgb(194, 82, 5);
+	--cs-color-minor: rgb(222, 226, 230);
+
+	//* Specific colors
+	--cs-color-radio-selected: rgb(0, 117, 255); // = Chromium-native #blue color.
+	--cs-color-radio-selected-hover: rgb(0, 92, 200); // = Chromium-native darker hover color
+	--cs-color-checkbox-border: var(--cs-color-darkgrey);
+	--cs-color-checkbox-border-hover: var(--cs-color-semi-black);
+
+	--cs-color-listhover: var(--static-cs-color-listhover, var(--calculated-cs-color-listhover));
+	--cs-color-listhover-contrast: var(--calculated-cs-color-listhover-contrast, var(--cs-color-primary-contrast));
+
+	//* Base for monochrome themes
+	--cs-color-mono-dark: var(--cs-color-black);
+	--cs-color-mono-light: rgb(255, 255, 0);
+
+	//* Pre-calculated tints and contrasts
+	--cs-color-success-lighter: rgb(228, 248, 234);
+	--cs-color-success-light: rgb(155, 230, 181);
+	--cs-color-success-dark: rgb(28, 119, 72);
+	--cs-color-success-darker: rgb(34, 109, 68);
+	--cs-color-danger-lighter: rgb(250, 235, 235);
+	--cs-color-danger-light: rgb(236, 181, 181);
+	--cs-color-danger-dark: rgb(186, 43, 42);
+	--cs-color-danger-darker: rgb(168, 45, 44);
+	--cs-color-info-lighter: rgb(232, 240, 249);
+	--cs-color-info-light: rgb(170, 198, 234);
+	--cs-color-info-dark: rgb(32, 107, 162);
+	--cs-color-info-darker: rgb(36, 98, 147);
+	--cs-color-warning-lighter: rgb(249, 235, 233);
+	--cs-color-warning-light: rgb(234, 184, 173);
+	--cs-color-warning-dark: rgb(170, 75, 26);
+	--cs-color-warning-darker: rgb(154, 71, 32);
+	--cs-color-minor-lighter: rgb(248, 253, 253);
+	--cs-color-minor-light: rgb(233, 241, 249);
+	--cs-color-minor-dark: rgb(206, 209, 213);
+	--cs-color-minor-darker: rgb(175, 178, 181);
+	--cs-color-success-contrast: rgb(255, 255, 255);
+	--cs-color-danger-contrast: rgb(255, 255, 255);
+	--cs-color-info-contrast: rgb(255, 255, 255);
+	--cs-color-warning-contrast: rgb(255, 255, 255);
+	--cs-color-minor-contrast: rgb(51, 51, 51);
+	--cs-color-semi-black-contrast: rgb(255, 255, 255);
+	--cs-color-darkgrey-contrast: rgb(255, 255, 255);
+	--cs-color-grey-contrast: rgb(51, 51, 51);
+	--cs-color-lightgrey-contrast: rgb(51, 51, 51);
+	--cs-color-semi-white-contrast: rgb(51, 51, 51);
+}

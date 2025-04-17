@@ -67,4 +67,26 @@ html {
 	--cs-color-grey-contrast: rgb(51, 51, 51);
 	--cs-color-lightgrey-contrast: rgb(51, 51, 51);
 	--cs-color-semi-white-contrast: rgb(51, 51, 51);
+
+	// imported
+	--cs-color-primary: rgb(0, 73, 144);
+	--cs-color-primary-lighter: rgb(228, 234, 248);
+	--cs-color-primary-light: rgb(157, 179, 230);
+	--cs-color-primary-dark: rgb(20, 70, 134);
+	--cs-color-primary-darker: rgb(32, 65, 116);
+	--cs-color-secondary: rgb(245, 121, 19);
+	--cs-color-secondary-lighter: rgb(254, 240, 235);
+	--cs-color-secondary-light: rgb(250, 200, 181);
+	--cs-color-secondary-dark: rgb(227, 113, 26);
+	--cs-color-secondary-darker: rgb(192, 99, 35);
+	--cs-color-custombtn: rgb(0, 73, 144);
+	--cs-color-custombtn-lighter: rgb(228, 234, 248);
+	--cs-color-custombtn-light: rgb(157, 179, 230);
+	--cs-color-custombtn-dark: rgb(20, 70, 134);
+	--cs-color-custombtn-darker: rgb(32, 65, 116);
+	--calculated-cs-color-listhover: rgb(221, 238, 255);
+	--cs-color-primary-contrast: rgb(255, 255, 255);
+	--cs-color-secondary-contrast: rgb(51, 51, 51);
+	--cs-color-custombtn-contrast: rgb(255, 255, 255);
+	--calculated-cs-color-listhover-contrast: rgb(51, 51, 51);
 }

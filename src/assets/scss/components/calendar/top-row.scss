@@ -1,3 +1,5 @@
+@use "../../utilities/mixins" as *;
+
 .cs-calendar-table {
 	.cs-cell-top-row {
 		display: flex;
@@ -20,12 +22,20 @@
 
 				justify-content: center;
 				align-items: center;
-				height: 32px;
-				width: 32px;
+				height: 24px;
+				width: 24px;
 				margin: 8px;
-				color: var(--cs-color-white);
-				background-color: var(--cs-color-primary);
+				font-size: 21px;
+				font-weight: 500;
+
+				color: var(--cs-color-semi-black);
+				border: 1px solid var(--cs-color-primary);
 				border-radius: 50%;
+
+				&:hover {
+					cursor: pointer;
+					background-color: var(--cs-color-primary-lighter);
+				}
 			}
 		}
 

@@ -1,0 +1,40 @@
+@use "./variables" as *;
+
+.cs-pager-container {
+	display: flex;
+	// border: 1px solid black;
+	margin-top: 32px;
+
+	.cs-pager {
+		display: flex;
+		height: 42px;
+		width: $cell-size-w;
+		justify-content: center;
+		align-items: center;
+		margin: 0px 32px;
+
+		border-radius: 4px;
+		border: 1px solid var(--cs-color-primary);
+
+		&:hover {
+			cursor: pointer;
+			background-color: var(--cs-color-primary-lighter);
+		}
+
+		.cs-pager-icon {
+			display: flex;
+			flex: 1;
+			justify-content: center;
+			align-items: center;
+			font-size: 18px;
+			width: 18px;
+		}
+
+		.cs-pager-text {
+			display: flex;
+			flex: 4;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

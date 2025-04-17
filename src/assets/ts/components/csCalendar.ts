@@ -1,21 +1,56 @@
 export class csCalendar {
 	private currentMonthOffset = 0;
+	private monthNames = [
+		"Januari",
+		"Februari",
+		"Maart",
+		"April",
+		"Mei",
+		"Juni",
+		"Juli",
+		"Augustus",
+		"September",
+		"Oktober",
+		"November",
+		"December"
+	];
 
 	public init(): void {
 		this.generateTable(this.currentMonthOffset);
+		this.setMonthButtons();
+	}
 
-		document.getElementById("prev-month")?.addEventListener("click", () => {
+	private setMonthButtonsText(): void {
+		const today = new Date();
+
+		const prevMonth = <HTMLDivElement>document.querySelector(".cs-pager.cs-pager-prev-month");
+		const nextMonth = <HTMLDivElement>document.querySelector(".cs-pager.cs-pager-next-month");
+
+		const spanPrev = <HTMLSpanElement>prevMonth.querySelector(".cs-pager-text");
+		spanPrev.textContent = this.monthNames[today.getMonth() + this.currentMonthOffset - 1];
+
+		const spanNext = <HTMLSpanElement>nextMonth.querySelector(".cs-pager-text");
+		spanNext.textContent = this.monthNames[today.getMonth() + this.currentMonthOffset + 1];
+	}
+
+	private setMonthButtons(): void {
+		const prevMonth = document.querySelector(".cs-pager.cs-pager-prev-month");
+		const nextMonth = document.querySelector(".cs-pager.cs-pager-next-month");
+
+		prevMonth?.addEventListener("click", () => {
 			this.currentMonthOffset--;
 			this.generateTable(this.currentMonthOffset);
 		});
 
-		document.getElementById("next-month")?.addEventListener("click", () => {
+		nextMonth?.addEventListener("click", () => {
 			this.currentMonthOffset++;
 			this.generateTable(this.currentMonthOffset);
 		});
 	}
 
 	private generateTable(monthOffset: number): void {
+		this.setMonthButtonsText();
+
 		const container = document.getElementById("csCalendar") as HTMLElement;
 		if (!container) return;
 
@@ -51,21 +86,7 @@ export class csCalendar {
 		const daysInMonth = new Date(year, month + 1, 0).getDate();
 		const firstDayOfMonth = new Date(year, month, 1).getDay();
 
-		const monthNames = [
-			"Januari",
-			"Februari",
-			"Maart",
-			"April",
-			"Mei",
-			"Juni",
-			"Juli",
-			"Augustus",
-			"September",
-			"Oktober",
-			"November",
-			"December"
-		];
-		caption.textContent = `${monthNames[month]} ${year}`;
+		caption.textContent = `${this.monthNames[month]} ${year}`;
 
 		const daysOfWeek = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
 		daysOfWeek.forEach((day) => {

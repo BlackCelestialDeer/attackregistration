@@ -20,19 +20,6 @@ export class csCalendar {
 		this.setMonthButtons();
 	}
 
-	private setMonthButtonsText(): void {
-		const today = new Date();
-
-		const prevMonth = <HTMLDivElement>document.querySelector(".cs-pager.cs-pager-prev-month");
-		const nextMonth = <HTMLDivElement>document.querySelector(".cs-pager.cs-pager-next-month");
-
-		const spanPrev = <HTMLSpanElement>prevMonth.querySelector(".cs-pager-text");
-		spanPrev.textContent = this.monthNames[today.getMonth() + this.currentMonthOffset - 1];
-
-		const spanNext = <HTMLSpanElement>nextMonth.querySelector(".cs-pager-text");
-		spanNext.textContent = this.monthNames[today.getMonth() + this.currentMonthOffset + 1];
-	}
-
 	private setMonthButtons(): void {
 		const prevMonth = document.querySelector(".cs-pager.cs-pager-prev-month");
 		const nextMonth = document.querySelector(".cs-pager.cs-pager-next-month");
@@ -49,15 +36,8 @@ export class csCalendar {
 	}
 
 	private generateTable(monthOffset: number): void {
-		this.setMonthButtonsText();
-
-		const container = document.getElementById("csCalendar") as HTMLElement;
-		if (!container) return;
-
-		container.innerHTML = ""; // Clear previous calendar
-
-		const table = document.createElement("table");
-		table.classList.add("cs-calendar-table");
+		const table = document.querySelector(".cs-calendar-table") as HTMLTableElement;
+		table.innerHTML = "";
 
 		const caption = document.createElement("caption");
 		caption.id = "month-title";
@@ -75,16 +55,15 @@ export class csCalendar {
 		table.appendChild(caption);
 		table.appendChild(thead);
 		table.appendChild(tbody);
-		container.appendChild(table);
 
-		const today = new Date();
-		today.setMonth(today.getMonth() + monthOffset);
-		today.setDate(1);
+		const baseDate = new Date();
+		baseDate.setMonth(baseDate.getMonth() + monthOffset);
+		baseDate.setDate(1);
 
-		const year = today.getFullYear();
-		const month = today.getMonth();
+		const year = baseDate.getFullYear();
+		const month = baseDate.getMonth();
 		const daysInMonth = new Date(year, month + 1, 0).getDate();
-		const firstDayOfMonth = new Date(year, month, 1).getDay();
+		const firstDayOfMonth = (new Date(year, month, 1).getDay() + 6) % 7;
 
 		caption.textContent = `${this.monthNames[month]} ${year}`;
 
@@ -99,7 +78,7 @@ export class csCalendar {
 		let row = document.createElement("tr");
 		tbody.appendChild(row);
 
-		for (let i = 0; i < (firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1); i++) {
+		for (let i = 0; i < firstDayOfMonth; i++) {
 			row.appendChild(document.createElement("td"));
 		}
 
@@ -109,9 +88,10 @@ export class csCalendar {
 				tbody.appendChild(row);
 			}
 
+			const date = new Date(year, month, day);
 			const td = document.createElement("td");
 			td.classList.add("cs-table-content-cell");
-			td.appendChild(this.addCellContents(day));
+			td.appendChild(this.addCellContents(day, date));
 			row.appendChild(td);
 		}
 
@@ -120,7 +100,7 @@ export class csCalendar {
 		}
 	}
 
-	private addCellContents(day: number): HTMLDivElement {
+	private addCellContents(day: number, fullDate: Date): HTMLDivElement {
 		const container = document.createElement("div");
 		container.classList.add("cs-cell-container");
 
@@ -134,6 +114,11 @@ export class csCalendar {
 		const addButton = document.createElement("span");
 		addButton.classList.add("cs-cell-add-button", "material-symbols-outlined");
 		addButton.textContent = "add";
+
+		const yyyy = fullDate.getFullYear();
+		const mm = String(fullDate.getMonth() + 1).padStart(2, "0");
+		const dd = String(fullDate.getDate()).padStart(2, "0");
+		addButton.setAttribute("data-date", `${yyyy}-${mm}-${dd}`);
 
 		topRow.appendChild(dayNumber);
 		topRow.appendChild(addButton);

@@ -2,7 +2,7 @@
 
 .cs-pager-container {
 	display: flex;
-	// border: 1px solid black;
+	justify-content: flex-end;
 	margin-top: 32px;
 
 	.cs-pager {
@@ -11,7 +11,6 @@
 		width: $cell-size-w;
 		justify-content: center;
 		align-items: center;
-		margin: 0px 32px;
 
 		border-radius: 4px;
 		border: 1px solid var(--cs-color-primary);
@@ -19,6 +18,18 @@
 		&:hover {
 			cursor: pointer;
 			background-color: var(--cs-color-primary-lighter);
+		}
+
+		&.cs-pager-prev-month {
+			margin-right: 16px;
+
+			.cs-pager-text {
+				margin-right: 18px;
+			}
+		}
+
+		&.cs-pager-next-month .cs-pager-text {
+			margin-left: 18px;
 		}
 
 		.cs-pager-icon {

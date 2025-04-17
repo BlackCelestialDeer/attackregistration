@@ -1,0 +1,54 @@
+@use "./variables" as *;
+
+.cs-calendar {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+
+	.cs-calendar-table {
+		border-collapse: collapse;
+		background-color: var(--cs-color-white);
+
+		.cs-table-caption {
+			font-size: 24px;
+			margin: 24px 0px;
+		}
+
+		thead {
+			height: 48px;
+
+			tr {
+				.cs-table-header-cell {
+					font-weight: 500;
+					padding: 8px 16px;
+					border: 1px solid var(--cs-color-lightgrey);
+					color: var(--cs-color-primary);
+				}
+			}
+		}
+
+		.cs-calendar-body {
+			border: 1px solid var(--cs-color-lightgrey);
+
+			tr {
+				td {
+					height: $cell-size-h;
+					width: $cell-size-w;
+
+					&:not(.cs-table-content-cell) {
+						background-color: var(--cs-color-semi-white);
+					}
+
+					&.cs-table-content-cell {
+						border: 1px solid var(--cs-color-lightgrey);
+					}
+					.cs-cell-container {
+						display: flex;
+						flex-direction: column;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}

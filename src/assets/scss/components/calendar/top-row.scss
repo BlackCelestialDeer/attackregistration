@@ -1,0 +1,39 @@
+.cs-calendar-table {
+	.cs-cell-top-row {
+		display: flex;
+		flex: 1;
+		width: 100%;
+
+		span {
+			display: flex;
+
+			align-items: center;
+
+			&.cs-cell-day-number {
+				font-size: 18px;
+				flex: 1;
+				padding: 0px 8px;
+			}
+
+			&.cs-cell-add-button {
+				justify-content: flex-end;
+
+				justify-content: center;
+				align-items: center;
+				height: 32px;
+				width: 32px;
+				margin: 8px;
+				color: var(--cs-color-white);
+				background-color: var(--cs-color-primary);
+				border-radius: 50%;
+			}
+		}
+
+		.cs-cell-content-container {
+			display: flex;
+			flex: 3;
+			height: 100px;
+			border: 1px solid crimson;
+		}
+	}
+}

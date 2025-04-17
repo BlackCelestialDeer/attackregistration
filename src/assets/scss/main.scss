@@ -2,4 +2,6 @@
 @forward "./utilities/static.scss";
 @forward "./utilities/colors.scss";
 
-@forward "./components/calendar.scss";
+@forward "./components/calendar/table.scss";
+@forward "./components/calendar/top-row.scss";
+@forward "./components/calendar/content.scss";

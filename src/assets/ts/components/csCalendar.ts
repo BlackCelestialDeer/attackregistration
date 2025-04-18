@@ -114,6 +114,7 @@ export class csCalendar {
 		const addButton = document.createElement("span");
 		addButton.classList.add("cs-cell-add-button", "material-symbols-outlined");
 		addButton.textContent = "add";
+		this.setAddButtonsListener(addButton);
 
 		const yyyy = fullDate.getFullYear();
 		const mm = String(fullDate.getMonth() + 1).padStart(2, "0");
@@ -130,5 +131,11 @@ export class csCalendar {
 		container.appendChild(contentContainer);
 
 		return container;
+	}
+
+	private setAddButtonsListener(button: HTMLSpanElement): void {
+		button.addEventListener("click", () => {
+			console.log(button.getAttribute("data-date"));
+		});
 	}
 }

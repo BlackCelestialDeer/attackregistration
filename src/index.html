@@ -23,6 +23,39 @@
 					</div>
 				</div>
 			</div>
+			<div class="cs-modal">
+				<div class="cs-modal-content">
+					<span class="cs-modal-date"></span>
+					<div class="cs-modal-attack-type">
+						<label for="type_attack">Type aanval:</label>
+						<select name="type_attack">
+							<option>X - Nader te bepalen</option>
+							<option>Optie 1</option>
+							<option>Optie 2</option>
+						</select>
+					</div>
+					<div class="cs-modal-cluster">
+						<span>Clusteraanval: </span>
+						<input type="radio" id="option_yes" value="Ja" name="custer_attack" />
+						<label for="option_yes">Ja</label>
+						<input type="radio" id="option_no" value="Nee" name="custer_attack" />
+						<label for="option_no">Nee</label>
+					</div>
+					<div class="cs-modal-medication">
+						<span>Noodmedicatie:</span>
+						<input type="radio" id="option_yes" value="Ja" name="took_medication" />
+						<label for="option_yes">Ja</label>
+						<input type="radio" id="option_no" value="Nee" name="took_medication" />
+						<label for="option_no">Nee</label>
+						<input type="radio" id="option_unknown" value="Onbekend" name="took_medication" />
+						<label for="option_unknown">Onbekend</label>
+					</div>
+					<div class="cs-modal-triggers">
+						<label for="triggers">Triggers</label>
+						<input type="text" name="triggers" />
+					</div>
+				</div>
+			</div>
 		</app>
 	</body>
 </html>

@@ -1,0 +1,18 @@
+.cs-app {
+	position: relative;
+}
+
+.cs-modal {
+	display: flex;
+	position: absolute;
+	margin-inline: auto;
+	padding: 16px;
+
+	justify-self: center;
+	align-self: center;
+
+	border-radius: 4px;
+	background-color: var(--cs-color-white);
+
+	z-index: 20;
+}

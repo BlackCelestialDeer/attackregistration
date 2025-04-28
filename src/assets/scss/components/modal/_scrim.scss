@@ -1,0 +1,8 @@
+.cs-scrim {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--cs-color-transparent-darker);
+
+	z-index: 10;
+}

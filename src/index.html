@@ -27,37 +27,49 @@
 				<div class="cs-modal-content">
 					<span class="cs-modal-item cs-modal-date"></span>
 					<div class="cs-modal-item cs-modal-attack-type">
-						<label for="type_attack">Type aanval:</label>
-						<select name="type_attack">
-							<option>X - Nader te bepalen</option>
-							<option>Optie 1</option>
-							<option>Optie 2</option>
-						</select>
+						<label class="cs-modal-label" for="type_attack">Type aanval:</label>
+						<div class="cs-modal-input">
+							<select name="type_attack">
+								<option>X - Nader te bepalen</option>
+								<option>Optie 1</option>
+								<option>Optie 2</option>
+							</select>
+						</div>
 					</div>
 					<div class="cs-modal-item cs-modal-cluster">
-						<span>Clusteraanval: </span>
-						<input type="radio" id="option_yes" value="Ja" name="custer_attack" />
-						<label for="option_yes">Ja</label>
-						<input type="radio" id="option_no" value="Nee" name="custer_attack" />
-						<label for="option_no">Nee</label>
+						<span class="cs-modal-label">Clusteraanval: </span>
+						<div class="cs-modal-input">
+							<input type="radio" id="option_yes_cluster" value="Ja" name="cluster_attack" />
+							<label for="option_yes_cluster">Ja</label>
+							<input type="radio" id="option_no_cluster" value="Nee" name="cluster_attack" />
+							<label for="option_no_cluster">Nee</label>
+						</div>
 					</div>
 					<div class="cs-modal-item cs-modal-medication">
-						<span>Noodmedicatie:</span>
-						<input type="radio" id="option_yes" value="Ja" name="took_medication" />
-						<label for="option_yes">Ja</label>
-						<input type="radio" id="option_no" value="Nee" name="took_medication" />
-						<label for="option_no">Nee</label>
-						<input type="radio" id="option_unknown" value="Onbekend" name="took_medication" />
-						<label for="option_unknown">Onbekend</label>
+						<span class="cs-modal-label">Noodmedicatie:</span>
+						<div class="cs-modal-input">
+							<input type="radio" id="option_yes_medication" value="Ja" name="took_medication" />
+							<label for="option_yes_medication">Ja</label>
+							<input type="radio" id="option_no_medication" value="Nee" name="took_medication" />
+							<label for="option_no_medication">Nee</label>
+							<input
+								type="radio"
+								id="option_unknown_medication"
+								value="Onbekend"
+								name="took_medication"
+							/>
+							<label for="option_unknown_medication">Onbekend</label>
+						</div>
 					</div>
 					<div class="cs-modal-item cs-modal-triggers">
-						<label for="triggers">Triggers</label>
-						<input type="text" name="triggers" />
+						<label for="triggers" class="cs-modal-label">Triggers</label>
+						<div class="cs-modal-input">
+							<textarea type="text" name="triggers" rows="2" cols="30" wrap="hard"></textarea>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="cs-scrim">
-			</div>
+			<div class="cs-scrim"></div>
 		</app>
 	</body>
 </html>

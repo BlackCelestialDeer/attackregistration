@@ -7,6 +7,7 @@ export class csModal {
 	private dateSpan: HTMLSpanElement;
 	private backButton: HTMLDivElement;
 	private saveButton: HTMLDivElement;
+	private static currentDate: Date;
 
 	constructor() {
 		this.modalContainer = document.querySelector(".cs-modal") as HTMLDivElement;
@@ -28,10 +29,10 @@ export class csModal {
 	}
 
 	public setDate(rawDate: string): void {
-		const date = new Date(rawDate);
+		csModal.currentDate = new Date(rawDate);
 
-		this.weekdaySpan.innerText = this.getDayofWeek(date);
-		this.dateSpan.innerText = new Date(date).toLocaleDateString("nl-nl");
+		this.weekdaySpan.innerText = this.getDayofWeek();
+		this.dateSpan.innerText = new Date(csModal.currentDate).toLocaleDateString("nl-nl");
 	}
 
 	private setControls(): void {
@@ -41,12 +42,16 @@ export class csModal {
 
 		this.saveButton.addEventListener("click", () => {
 			this.setState(false);
+
+			const targetContentContainer = <HTMLDivElement>(
+				document.querySelector(`.cs-cell-content-container[data-date="${csModal.currentDate}"]`)
+			);
+
+			new csCalendar().addAttack(targetContentContainer);
 		});
 	}
 
-	private getDayofWeek(date: Date): string {
-		const dayNum = date.getDay();
-
-		return new csCalendar().daysOfWeek[(dayNum + 6) % 7];
+	private getDayofWeek(): string {
+		return new csCalendar().daysOfWeek[(csModal.currentDate.getDay() + 6) % 7];
 	}
 }

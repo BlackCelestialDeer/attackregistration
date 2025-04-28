@@ -24,6 +24,13 @@ export class csCalendar {
 		this.setMonthButtons();
 	}
 
+	public addAttack(target: HTMLDivElement): void {
+		const span = document.createElement("span");
+		span.classList.add("cs-attack-item");
+
+		target.appendChild(span);
+	}
+
 	private setMonthButtons(): void {
 		const prevMonth = document.querySelector(".cs-pager.cs-pager-prev-month");
 		const nextMonth = document.querySelector(".cs-pager.cs-pager-next-month");
@@ -119,16 +126,13 @@ export class csCalendar {
 		addButton.classList.add("cs-cell-add-button", "material-symbols-outlined");
 		addButton.textContent = "add";
 		this.setAddButtonsListener(addButton);
-
-		const yyyy = fullDate.getFullYear();
-		const mm = String(fullDate.getMonth() + 1).padStart(2, "0");
-		const dd = String(fullDate.getDate()).padStart(2, "0");
-		addButton.setAttribute("data-date", `${yyyy}-${mm}-${dd}`);
+		addButton.setAttribute("data-date", fullDate.toString());
 
 		topRow.appendChild(dayNumber);
 		topRow.appendChild(addButton);
 
 		const contentContainer = document.createElement("div");
+		contentContainer.setAttribute("data-date", fullDate.toString());
 		contentContainer.classList.add("cs-cell-content-container");
 
 		container.appendChild(topRow);

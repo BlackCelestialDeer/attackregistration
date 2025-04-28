@@ -1,6 +1,8 @@
 import { csModal } from "./csModal";
 
 export class csCalendar {
+	public daysOfWeek = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
+
 	private currentMonthOffset = 0;
 	private monthNames = [
 		"Januari",

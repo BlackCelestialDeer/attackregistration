@@ -1,0 +1,16 @@
+.cs-modal {
+	.cs-modal-date {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		padding-bottom: 16px;
+
+		.cs-modal-date-weekday,
+		.cs-modal-date-day {
+			display: flex;
+			margin: 0px 4px;
+			font-size: 21px;
+			color: var(--cs-color-primary);
+		}
+	}
+}

@@ -1,3 +1,5 @@
+import { csModal } from "./csModal";
+
 export class csCalendar {
 	private currentMonthOffset = 0;
 	private monthNames = [
@@ -134,7 +136,11 @@ export class csCalendar {
 	}
 
 	private setAddButtonsListener(button: HTMLSpanElement): void {
+		const modalClass = new csModal();
+
 		button.addEventListener("click", () => {
+			modalClass.setState(true);
+			modalClass.setDate(<string>button.getAttribute("data-date"));
 			console.log(button.getAttribute("data-date"));
 		});
 	}

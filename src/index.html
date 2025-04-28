@@ -23,9 +23,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="cs-modal">
+			<div class="cs-modal cs-hidden">
 				<div class="cs-modal-content">
-					<span class="cs-modal-item cs-modal-date"></span>
+					<div class="cs-modal-date">
+						<span class="cs-modal-date-weekday"></span>
+						<span class="cs-modal-date-day"></span>
+					</div>
 					<div class="cs-modal-item cs-modal-attack-type">
 						<label class="cs-modal-label" for="type_attack">Type aanval:</label>
 						<div class="cs-modal-input">
@@ -68,8 +71,18 @@
 						</div>
 					</div>
 				</div>
+				<div class="cs-modal-buttons">
+					<div id="csModalButtonSave" class="cs-btn cs-btn-minor cs-btn-icon">
+						<span class="material-symbols-outlined"> undo </span>
+						Terug
+					</div>
+					<div id="csModalButtonBack" class="cs-btn cs-btn-icon">
+						<span class="material-symbols-outlined"> check </span>
+						Opslaan
+					</div>
+				</div>
 			</div>
-			<div class="cs-scrim"></div>
+			<div class="cs-scrim cs-hidden"></div>
 		</app>
 	</body>
 </html>

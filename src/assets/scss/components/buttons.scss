@@ -1,0 +1,51 @@
+.cs-btn {
+	display: flex;
+	align-items: center;
+	width: auto;
+	padding: 8px;
+	border-radius: 4px;
+	color: var(--cs-color-primary-contrast);
+	background-color: var(--cs-color-primary);
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--cs-color-primary-darker);
+	}
+
+	// variations
+	&.cs-btn-outline {
+		color: var(--cs-color-primary);
+		border: 1px solid var(--cs-color-primary);
+		background-color: initial;
+
+		&:hover {
+			background-color: var(--cs-color-listhover);
+		}
+	}
+
+	&.cs-btn-minor {
+		color: var(--cs-color-minor-contrast);
+		background-color: var(--cs-color-minor);
+
+		&:hover {
+			background-color: var(--cs-color-minor-dark);
+		}
+	}
+
+	&.cs-btn-link {
+		border: none;
+		background-color: initial;
+		color: var(--cs-color-semi-black);
+		text-decoration: underline;
+
+		&:hover {
+			color: var(--cs-color-primary);
+		}
+	}
+
+	&.cs-btn-icon {
+		span {
+			margin-right: 4px;
+		}
+	}
+}

@@ -5,6 +5,7 @@
 .cs-modal {
 	display: flex;
 	position: absolute;
+	flex-direction: column;
 	margin-inline: auto;
 	padding: 16px;
 
@@ -17,4 +18,14 @@
 	min-width: 400px;
 
 	z-index: 20;
+
+	.cs-modal-buttons {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 16px;
+
+		.cs-btn {
+			margin-left: 8px;
+		}
+	}
 }

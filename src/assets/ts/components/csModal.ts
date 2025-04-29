@@ -7,6 +7,9 @@ export class csModal {
 	private dateSpan: HTMLSpanElement;
 	private backButton: HTMLDivElement;
 	private saveButton: HTMLDivElement;
+	private clusterBoolInputs: NodeListOf<HTMLInputElement>;
+	private attackCount: HTMLDivElement;
+
 	private static currentDate: Date;
 
 	constructor() {
@@ -18,14 +21,24 @@ export class csModal {
 		this.dateSpan = this.modalContainer.querySelector(".cs-modal-date .cs-modal-date-day") as HTMLSpanElement;
 		this.backButton = <HTMLDivElement>this.modalContainer.querySelector("#csModalButtonBack");
 		this.saveButton = <HTMLDivElement>this.modalContainer.querySelector("#csModalButtonSave");
+		this.clusterBoolInputs = <NodeListOf<HTMLInputElement>>(
+			this.modalContainer.querySelectorAll('input[name="cluster_attack"]')
+		);
+		this.attackCount = <HTMLDivElement>this.modalContainer.querySelector("#csAttackCountContainer");
 	}
 
 	public init(): void {
 		this.setControls();
 	}
+
 	public setState(state: boolean): void {
 		this.modalContainer.classList.toggle("cs-hidden", !state);
 		this.scrim.classList.toggle("cs-hidden", !state);
+
+		if (!state) {
+			(<HTMLFormElement>this.modalContainer.querySelector(".cs-modal-content")).reset();
+			this.attackCount.classList.add("cs-hidden");
+		}
 	}
 
 	public setDate(rawDate: string): void {
@@ -48,6 +61,12 @@ export class csModal {
 			);
 
 			new csCalendar().addAttack(targetContentContainer);
+		});
+
+		this.clusterBoolInputs.forEach((elem) => {
+			elem.addEventListener("change", () => {
+				this.attackCount.classList.toggle("cs-hidden", elem.value !== "Ja");
+			});
 		});
 	}
 

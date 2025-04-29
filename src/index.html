@@ -24,7 +24,7 @@
 				</div>
 			</div>
 			<div class="cs-modal cs-hidden">
-				<div class="cs-modal-content">
+				<form class="cs-modal-content">
 					<div class="cs-modal-date">
 						<span class="cs-modal-date-weekday"></span>
 						<span class="cs-modal-date-day"></span>
@@ -46,6 +46,12 @@
 							<label for="option_yes_cluster">Ja</label>
 							<input type="radio" id="option_no_cluster" value="Nee" name="cluster_attack" />
 							<label for="option_no_cluster">Nee</label>
+						</div>
+					</div>
+					<div id="csAttackCountContainer" class="cs-modal-item cs-modal-cluster-amount cs-hidden">
+						<span class="cs-modal-label">Aantal aanvallen: </span>
+						<div class="cs-modal-input">
+							<input type="number" id="attack_count" name="attack_count" min="1" />
 						</div>
 					</div>
 					<div class="cs-modal-item cs-modal-medication">
@@ -70,7 +76,7 @@
 							<textarea type="text" name="triggers" rows="2" cols="30" wrap="hard"></textarea>
 						</div>
 					</div>
-				</div>
+				</form>
 				<div class="cs-modal-buttons">
 					<div id="csModalButtonBack" class="cs-btn cs-btn-minor cs-btn-icon">
 						<span class="material-symbols-outlined"> undo </span>

@@ -41,6 +41,9 @@
 			select {
 				cursor: pointer;
 				height: 100%;
+				width: 150px;
+				padding-inline: 4px;
+				padding-block: 4px;
 			}
 
 			input[type="radio"] {
@@ -51,12 +54,19 @@
 				margin: 0px 8px;
 			}
 
+			input[type="number"] {
+				width: 38px;
+			}
+
 			textarea {
+				font-family: Arial, sans-serif;
 				resize: none;
 				padding: 0px;
 				width: 75%;
 				padding-inline: 4px;
 				padding-block: 4px;
+
+				max-width: 150px;
 			}
 		}
 	}

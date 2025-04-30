@@ -1,4 +1,5 @@
 import { csCalendar } from "./csCalendar";
+import { csDatabase } from "./csDatabase";
 
 export class csModal {
 	private modalContainer: HTMLDivElement;
@@ -69,6 +70,8 @@ export class csModal {
 			);
 
 			new csCalendar().addAttack(targetContentContainer);
+
+			this.sendData(csModal.currentDate);
 		});
 
 		this.clusterRadioInputs.forEach((elem) => {
@@ -92,5 +95,22 @@ export class csModal {
 
 	private getDayofWeek(): string {
 		return new csCalendar().daysOfWeek[(csModal.currentDate.getDay() + 6) % 7];
+	}
+
+	private sendData(date: Date): void {
+		const formData = new FormData(this.modalContentForm);
+
+		const dataObject: IAttackEntry = {
+			type_attack: (formData.get("type_attack") || "").toString(),
+			cluster_attack: (formData.get("cluster_attack") || "").toString(),
+			took_medication: (formData.get("took_medication") || "").toString(),
+			effect_medication: (formData.get("effect_medication") || "").toString(),
+			triggers: (formData.get("triggers") || "").toString(),
+			factors: (formData.get("factors") || "").toString()
+		};
+
+		console.log(dataObject);
+
+		new csDatabase().saveAttack(date, dataObject);
 	}
 }

@@ -1,4 +1,5 @@
 import { csCalendar } from "./csCalendar";
+import { csForm } from "./csForm";
 
 export class csModal {
 	private modalContainer: HTMLDivElement;
@@ -7,10 +8,6 @@ export class csModal {
 	private dateSpan: HTMLSpanElement;
 	private backButton: HTMLDivElement;
 	private saveButton: HTMLDivElement;
-	private medicationRadioInputs: NodeListOf<HTMLInputElement>;
-	private clusterRadioInputs: NodeListOf<HTMLInputElement>;
-	private attackCount: HTMLDivElement;
-	private medicationEffect: HTMLDivElement;
 	private modalContentForm: HTMLFormElement;
 
 	private static currentDate: Date;
@@ -24,14 +21,6 @@ export class csModal {
 		this.dateSpan = this.modalContainer.querySelector(".cs-modal-date .cs-modal-date-day") as HTMLSpanElement;
 		this.backButton = <HTMLDivElement>this.modalContainer.querySelector("#csModalButtonBack");
 		this.saveButton = <HTMLDivElement>this.modalContainer.querySelector("#csModalButtonSave");
-		this.clusterRadioInputs = <NodeListOf<HTMLInputElement>>(
-			this.modalContainer.querySelectorAll('input[name="cluster_attack"]')
-		);
-		this.medicationRadioInputs = <NodeListOf<HTMLInputElement>>(
-			this.modalContainer.querySelectorAll('input[name="took_medication"]')
-		);
-		this.attackCount = <HTMLDivElement>this.modalContainer.querySelector("#csAttackCountContainer");
-		this.medicationEffect = <HTMLDivElement>this.modalContainer.querySelector("#csMedicationEffectContainer");
 		this.modalContentForm = <HTMLFormElement>this.modalContainer.querySelector(".cs-modal-content");
 	}
 
@@ -45,7 +34,6 @@ export class csModal {
 
 		if (!state) {
 			this.modalContentForm.reset();
-			this.attackCount.classList.add("cs-hidden");
 		}
 	}
 
@@ -69,20 +57,9 @@ export class csModal {
 			);
 
 			new csCalendar().addAttack(targetContentContainer);
-		});
 
-		this.clusterRadioInputs.forEach((elem) => {
-			elem.addEventListener("change", () => {
-				this.attackCount.classList.toggle("cs-hidden", elem.value !== "Ja");
-			});
+			new csForm().sendData(csModal.currentDate);
 		});
-
-		this.medicationRadioInputs.forEach((elem) => {
-			elem.addEventListener("change", () => {
-				this.medicationEffect.classList.toggle("cs-hidden", elem.value !== "Ja");
-			});
-		});
-
 		this.modalContentForm.addEventListener("keydown", (e: KeyboardEvent) => {
 			if (e.key === "13") {
 				e.preventDefault();

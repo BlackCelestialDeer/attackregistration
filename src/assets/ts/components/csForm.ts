@@ -24,8 +24,16 @@ export class csForm {
 	}
 
 	public sendData(date: Date): void {
-		const formData = new FormData(this.modalContentForm);
-		for (var [key, value] of formData.entries()) {
+		const activeModal = document.querySelector(".cs-modal:not(.cs-hidden)");
+		if (!activeModal) {
+			console.error("No active modal found");
+			return;
+		}
+
+		const form = <HTMLFormElement>activeModal.querySelector("form.cs-modal-content");
+		const formData = new FormData(form);
+
+		for (const [key, value] of formData.entries()) {
 			console.log(`${key}: `, value);
 		}
 
@@ -38,6 +46,8 @@ export class csForm {
 			triggers: (formData.get("triggers") || "").toString(),
 			factors: (formData.get("factors") || "").toString()
 		};
+
+		console.log(dataObject);
 
 		new csDatabase().saveAttack(date, dataObject);
 	}

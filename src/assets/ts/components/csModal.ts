@@ -50,6 +50,7 @@ export class csModal {
 		});
 
 		this.saveButton.addEventListener("click", () => {
+			new csForm().sendData(csModal.currentDate);
 			this.setState(false);
 
 			const targetContentContainer = <HTMLDivElement>(
@@ -57,8 +58,6 @@ export class csModal {
 			);
 
 			new csCalendar().addAttack(targetContentContainer);
-
-			new csForm().sendData(csModal.currentDate);
 		});
 		this.modalContentForm.addEventListener("keydown", (e: KeyboardEvent) => {
 			if (e.key === "13") {

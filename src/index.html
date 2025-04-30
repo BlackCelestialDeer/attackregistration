@@ -29,35 +29,31 @@
 						<span class="cs-modal-date-weekday"></span>
 						<span class="cs-modal-date-day"></span>
 					</div>
-
 					<div class="cs-modal-item cs-modal-attack-type">
 						<label class="cs-modal-label" for="type_attack">Type aanval:</label>
 						<div class="cs-modal-input">
 							<select name="type_attack">
-								<option value="X - Nader te bepalen" selected>X - Nader te bepalen</option>
-								<option value="Optie 1">Optie 1</option>
-								<option value="Optie 2">Optie 2</option>
+								<option>X - Nader te bepalen</option>
+								<option>Optie 1</option>
+								<option>Optie 2</option>
 							</select>
 						</div>
 					</div>
-
 					<div class="cs-modal-item cs-modal-cluster">
 						<span class="cs-modal-label">Clusteraanval: </span>
 						<div class="cs-modal-input">
 							<input type="radio" id="option_yes_cluster" value="Ja" name="cluster_attack" />
 							<label for="option_yes_cluster">Ja</label>
-							<input type="radio" id="option_no_cluster" value="Nee" name="cluster_attack" checked />
+							<input type="radio" id="option_no_cluster" value="Nee" name="cluster_attack" />
 							<label for="option_no_cluster">Nee</label>
 						</div>
 					</div>
-
 					<div id="csAttackCountContainer" class="cs-modal-item cs-modal-cluster-amount cs-hidden">
 						<span class="cs-modal-label">Aantal aanvallen: </span>
 						<div class="cs-modal-input">
-							<input type="number" id="attack_count" name="attack_count" value="1" min="1" />
+							<input type="number" id="attack_count" name="attack_count" min="1" />
 						</div>
 					</div>
-
 					<div class="cs-modal-item cs-modal-medication">
 						<span class="cs-modal-label">Noodmedicatie:</span>
 						<div class="cs-modal-input">
@@ -70,26 +66,22 @@
 								id="option_unknown_medication"
 								value="Onbekend"
 								name="took_medication"
-								checked
 							/>
 							<label for="option_unknown_medication">Onbekend</label>
 						</div>
 					</div>
-
 					<div class="cs-modal-item cs-modal-effect-medication cs-hidden" id="csMedicationEffectContainer">
 						<label for="effect_medication" class="cs-modal-label">Effect medicatie</label>
 						<div class="cs-modal-input">
 							<textarea type="text" name="effect_medication" rows="2" cols="30" wrap="hard"></textarea>
 						</div>
 					</div>
-
 					<div class="cs-modal-item cs-modal-triggers">
 						<label for="triggers" class="cs-modal-label">Triggers</label>
 						<div class="cs-modal-input">
 							<textarea type="text" name="triggers" rows="2" cols="30" wrap="hard"></textarea>
 						</div>
 					</div>
-
 					<div class="cs-modal-item cs-modal-prov-factors">
 						<label for="factors" class="cs-modal-label">Provocerende factoren</label>
 						<div class="cs-modal-input">
@@ -97,7 +89,6 @@
 						</div>
 					</div>
 				</form>
-
 				<div class="cs-modal-buttons">
 					<div id="csModalButtonBack" class="cs-btn cs-btn-minor cs-btn-icon">
 						<span class="material-symbols-outlined"> undo </span>

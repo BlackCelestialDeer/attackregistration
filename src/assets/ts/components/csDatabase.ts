@@ -7,5 +7,7 @@ export class csDatabase {
 			csDatabase.attacksObject[key] = [];
 		}
 		csDatabase.attacksObject[key].push(item);
+
+		console.log(csDatabase.attacksObject);
 	}
 }

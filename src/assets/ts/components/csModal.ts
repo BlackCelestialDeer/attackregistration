@@ -34,6 +34,14 @@ export class csModal {
 
 		if (!state) {
 			this.modalContentForm.reset();
+			// reset conditional questions
+			const conditionalQuestions = this.modalContentForm.querySelectorAll(
+				".cs-modal-effect-medication, .cs-modal-cluster-amount"
+			);
+
+			for (const elem of conditionalQuestions) {
+				elem.classList.add("cs-hidden");
+			}
 		}
 	}
 

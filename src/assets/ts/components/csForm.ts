@@ -24,18 +24,7 @@ export class csForm {
 	}
 
 	public sendData(date: Date): void {
-		const activeModal = document.querySelector(".cs-modal:not(.cs-hidden)");
-		if (!activeModal) {
-			console.error("No active modal found");
-			return;
-		}
-
-		const form = <HTMLFormElement>activeModal.querySelector("form.cs-modal-content");
-		const formData = new FormData(form);
-
-		for (const [key, value] of formData.entries()) {
-			console.log(`${key}: `, value);
-		}
+		const formData = new FormData(this.modalContentForm);
 
 		const dataObject: IAttackEntry = {
 			type_attack: (formData.get("type_attack") || "").toString(),

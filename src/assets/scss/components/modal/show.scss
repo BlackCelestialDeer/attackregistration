@@ -2,4 +2,14 @@
 	.cs-modal-input {
 		display: none;
 	}
+
+	.cs-modal-item {
+		justify-content: space-between;
+
+		.cs-modal-output {
+			display: flex;
+			flex: 1;
+			max-width: 25%;
+		}
+	}
 }

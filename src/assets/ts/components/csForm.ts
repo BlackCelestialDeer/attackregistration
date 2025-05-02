@@ -24,9 +24,11 @@ export class csForm {
 	}
 
 	public sendData(date: Date): void {
+		const database = new csDatabase();
 		const formData = new FormData(this.modalContentForm);
 
 		const dataObject: IAttackEntry = {
+			date: date.toDateString(),
 			type_attack: (formData.get("type_attack") || "").toString(),
 			cluster_attack: (formData.get("cluster_attack") || "").toString(),
 			attack_count: (formData.get("attack_count") || "1").toString(),
@@ -36,9 +38,7 @@ export class csForm {
 			factors: (formData.get("factors") || "").toString()
 		};
 
-		console.log(dataObject);
-
-		new csDatabase().saveAttack(date, dataObject);
+		database.saveAttack(dataObject);
 	}
 
 	private setupEventListeners(): void {

@@ -1,4 +1,5 @@
 import { csCalendar } from "./csCalendar";
+import { csDatabase } from "./csDatabase";
 import { csForm } from "./csForm";
 
 export class csModal {
@@ -34,13 +35,20 @@ export class csModal {
 
 		if (!state) {
 			this.modalContentForm.reset();
+
 			// reset conditional questions
 			const conditionalQuestions = this.modalContentForm.querySelectorAll(
-				".cs-modal-effect-medication, .cs-modal-cluster-amount"
+				".cs-modal-item.cs-modal-effect-medication, .cs-modal-item.cs-modal-cluster-amount"
 			);
 
 			for (const elem of conditionalQuestions) {
 				elem.classList.add("cs-hidden");
+			}
+
+			// reset showFilledIn
+			this.modalContentForm.classList.remove("cs-modal-show-data");
+			for (const elem of this.modalContentForm.querySelectorAll(".cs-modal-output")) {
+				elem.textContent = "";
 			}
 		}
 	}
@@ -52,6 +60,40 @@ export class csModal {
 		this.dateSpan.innerText = new Date(csModal.currentDate).toLocaleDateString("nl-nl");
 	}
 
+	public showFilledIn(id: number): void {
+		console.log("showFilledIn");
+		console.log(csDatabase.attacksObject);
+
+		this.setState(true);
+		this.modalContentForm.classList.add("cs-modal-show-data");
+
+		const data: IAttackEntry = csDatabase.attacksObject[id][0];
+
+		const keyList: (keyof IAttackEntry)[] = [
+			"type_attack",
+			"cluster_attack",
+			"attack_count",
+			"took_medication",
+			"effect_medication",
+			"triggers",
+			"factors"
+		];
+
+		const toggleVisibility = (key: keyof IAttackEntry, condition: boolean): void => {
+			const element = this.modalContentForm.querySelector<HTMLDivElement>(`.cs-modal-item.${key}`);
+			if (element) element.classList.toggle("cs-hidden", condition);
+		};
+
+		toggleVisibility("attack_count", data.cluster_attack !== "Ja");
+		toggleVisibility("effect_medication", data.took_medication !== "Ja");
+
+		for (const key of keyList) {
+			const outputElem = this.modalContentForm.querySelector<HTMLDivElement>(`.cs-modal-output.${key}`);
+			if (outputElem) outputElem.textContent = data[key];
+		}
+
+		console.log(data);
+	}
 	private setControls(): void {
 		this.backButton.addEventListener("click", () => {
 			this.setState(false);

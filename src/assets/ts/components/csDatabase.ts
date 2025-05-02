@@ -1,13 +1,19 @@
 export class csDatabase {
 	public static attacksObject: Record<string, IAttackEntry[]> = {};
+	public static attacksID: number = -1;
+	private static recordedDates: string[] = [];
 
-	public saveAttack(date: Date, item: IAttackEntry): void {
-		const key = date.toDateString();
-		if (!csDatabase.attacksObject[key]) {
-			csDatabase.attacksObject[key] = [];
+	public saveAttack(item: IAttackEntry): void {
+		csDatabase.attacksID++;
+
+		if (csDatabase.recordedDates.indexOf(item.date) < 0) {
+			csDatabase.recordedDates.push(item.date);
 		}
-		csDatabase.attacksObject[key].push(item);
 
-		console.log(csDatabase.attacksObject);
+		if (!csDatabase.attacksObject[csDatabase.attacksID]) {
+			csDatabase.attacksObject[csDatabase.attacksID] = [];
+		}
+
+		csDatabase.attacksObject[csDatabase.attacksID].push(item);
 	}
 }

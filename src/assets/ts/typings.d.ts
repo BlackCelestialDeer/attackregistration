@@ -1,4 +1,5 @@
 interface IAttackEntry {
+	date: string;
 	type_attack: string;
 	cluster_attack: string;
 	took_medication: string;

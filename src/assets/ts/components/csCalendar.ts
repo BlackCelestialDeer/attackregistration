@@ -1,3 +1,4 @@
+import { csDatabase } from "./csDatabase";
 import { csModal } from "./csModal";
 
 export class csCalendar {
@@ -27,8 +28,16 @@ export class csCalendar {
 	public addAttack(target: HTMLDivElement): void {
 		const span = document.createElement("span");
 		span.classList.add("cs-attack-item");
+		span.id = `attacksID${csDatabase.attacksID}`;
+		span.textContent = `attacksID${csDatabase.attacksID}`;
 
 		target.appendChild(span);
+
+		span.addEventListener("click", (e: Event) => {
+			console.log(span);
+			new csModal().showFilledIn(parseInt(span.id.replace(/attacksID/g, "")));
+			e.preventDefault();
+		});
 	}
 
 	private setMonthButtons(): void {

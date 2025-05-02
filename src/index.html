@@ -29,7 +29,7 @@
 						<span class="cs-modal-date-weekday"></span>
 						<span class="cs-modal-date-day"></span>
 					</div>
-					<div class="cs-modal-item cs-modal-attack-type">
+					<div class="cs-modal-item cs-modal-attack-type type_attack">
 						<label class="cs-modal-label" for="type_attack">Type aanval:</label>
 						<div class="cs-modal-input">
 							<select name="type_attack">
@@ -38,8 +38,9 @@
 								<option>Optie 2</option>
 							</select>
 						</div>
+						<div class="cs-modal-output cs-modal-attack-type type_attack"></div>
 					</div>
-					<div class="cs-modal-item cs-modal-cluster">
+					<div class="cs-modal-item cs-modal-cluster cluster_attack">
 						<span class="cs-modal-label">Clusteraanval: </span>
 						<div class="cs-modal-input">
 							<input type="radio" id="option_yes_cluster" value="Ja" name="cluster_attack" />
@@ -47,14 +48,19 @@
 							<input type="radio" id="option_no_cluster" value="Nee" name="cluster_attack" />
 							<label for="option_no_cluster">Nee</label>
 						</div>
+						<div class="cs-modal-output cs-modal-cluster cluster_attack"></div>
 					</div>
-					<div id="csAttackCountContainer" class="cs-modal-item cs-modal-cluster-amount cs-hidden">
+					<div
+						id="csAttackCountContainer"
+						class="cs-modal-item cs-modal-cluster-amount cs-hidden attack_count"
+					>
 						<span class="cs-modal-label">Aantal aanvallen: </span>
 						<div class="cs-modal-input">
 							<input type="number" id="attack_count" name="attack_count" min="1" />
 						</div>
+						<div class="cs-modal-output cs-modal-cluster-amount attack_count"></div>
 					</div>
-					<div class="cs-modal-item cs-modal-medication">
+					<div class="cs-modal-item cs-modal-medication took_medication">
 						<span class="cs-modal-label">Noodmedicatie:</span>
 						<div class="cs-modal-input">
 							<input type="radio" id="option_yes_medication" value="Ja" name="took_medication" />
@@ -69,24 +75,31 @@
 							/>
 							<label for="option_unknown_medication">Onbekend</label>
 						</div>
+						<div class="cs-modal-output cs-modal-medication took_medication"></div>
 					</div>
-					<div class="cs-modal-item cs-modal-effect-medication cs-hidden" id="csMedicationEffectContainer">
+					<div
+						class="cs-modal-item cs-modal-effect-medication cs-hidden effect_medication"
+						id="csMedicationEffectContainer"
+					>
 						<label for="effect_medication" class="cs-modal-label">Effect medicatie</label>
 						<div class="cs-modal-input">
 							<textarea type="text" name="effect_medication" rows="2" cols="30" wrap="hard"></textarea>
 						</div>
+						<div class="cs-modal-output cs-modal-label effect_medication"></div>
 					</div>
-					<div class="cs-modal-item cs-modal-triggers">
+					<div class="cs-modal-item cs-modal-triggers triggers">
 						<label for="triggers" class="cs-modal-label">Triggers</label>
 						<div class="cs-modal-input">
 							<textarea type="text" name="triggers" rows="2" cols="30" wrap="hard"></textarea>
 						</div>
+						<div class="cs-modal-output cs-modal-triggers triggers"></div>
 					</div>
-					<div class="cs-modal-item cs-modal-prov-factors">
+					<div class="cs-modal-item cs-modal-prov-factors factors">
 						<label for="factors" class="cs-modal-label">Provocerende factoren</label>
 						<div class="cs-modal-input">
 							<textarea type="text" name="factors" rows="2" cols="30" wrap="hard"></textarea>
 						</div>
+						<div class="cs-modal-output cs-modal-prov-factors factors"></div>
 					</div>
 				</form>
 				<div class="cs-modal-buttons">

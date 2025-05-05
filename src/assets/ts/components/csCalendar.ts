@@ -26,10 +26,6 @@ export class csCalendar {
 	}
 
 	public addAttack(target: HTMLDivElement): void {
-		if (target.childElementCount > 2) {
-			return;
-		}
-
 		const span = document.createElement("span");
 		span.classList.add("cs-attack-item");
 		span.id = `attacksID${csDatabase.attacksID}`;
@@ -44,35 +40,35 @@ export class csCalendar {
 			e.preventDefault();
 		});
 
-		if (target.childElementCount < 2) {
-			target.appendChild(span);
-		} else if (target.childElementCount === 2) {
-			const targetDate = <string>target.getAttribute("data-date");
-
-			target.appendChild(this.addShowMoreButton(targetDate));
+		if (target.childElementCount === 2) {
+			target.appendChild(this.addShowMoreButton(<string>target.getAttribute("data-date"), target));
 		}
+
+		if (target.childElementCount > 1) {
+			span.classList.add("cs-hidden-attack");
+
+			// update show more button
+			const elem = <HTMLSpanElement>target.querySelector(".cs-show-more-attacks");
+			elem.textContent = `+${target.childElementCount - 2}`;
+		}
+
+		target.appendChild(span);
 
 		return;
 	}
 
-	private addShowMoreButton(date: string): HTMLDivElement {
+	private addShowMoreButton(date: string, parent: HTMLDivElement): HTMLDivElement {
 		const container = document.createElement("div");
 		container.classList.add("cs-attack-item", "cs-show-more-attacks");
 		container.setAttribute("data-date", date);
 
-		const icon = document.createElement("span");
-		icon.classList.add("cs-icon", "material-symbols-outlined");
-		icon.textContent = " add ";
-
 		const text = document.createElement("span");
-		text.textContent = "Meer";
+		text.textContent = "+1";
 
 		container.addEventListener("click", () => {
-			console.log(date);
-			console.log(csDatabase.dateIDs[date]);
+			parent.classList.add("cs-show-all-attacks");
 		});
 
-		container.appendChild(icon);
 		container.appendChild(text);
 
 		return container;

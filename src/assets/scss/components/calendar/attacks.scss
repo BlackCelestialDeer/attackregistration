@@ -1,9 +1,14 @@
 @use "../../utilities/elevation.scss" as *;
+@use "./variables.scss" as *;
 
 .cs-cell-content-container {
 	display: flex;
 	flex-direction: column;
 	padding: 4px;
+	max-height: $cell-size-h;
+	background: var(--cs-color-white);
+
+	transition: height 125ms ease;
 
 	.cs-attack-item {
 		display: flex;
@@ -41,9 +46,26 @@
 			}
 		}
 
-		&.cs-single-attack:hover,
-		&.cs-cluster-attack:hover {
-			// text-decoration: underline;
+		&.cs-hidden-attack {
+			display: none;
+		}
+	}
+
+	&.cs-show-all-attacks {
+		position: absolute;
+		width: $cell-size-w;
+		height: auto;
+
+		.cs-attack-item {
+			min-height: 48px;
+
+			&.cs-show-more-attacks {
+				display: none;
+			}
+
+			&.cs-hidden-attack {
+				display: flex;
+			}
 		}
 	}
 }

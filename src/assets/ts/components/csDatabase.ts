@@ -1,19 +1,19 @@
 export class csDatabase {
-	public static attacksObject: Record<string, IAttackEntry[]> = {};
+	public static attacksObject: Record<string, IAttackEntry> = {};
 	public static attacksID: number = -1;
-	private static recordedDates: string[] = [];
+	public static dateIDs: { [date: string]: number[] } = {};
 
 	public saveAttack(item: IAttackEntry): void {
 		csDatabase.attacksID++;
 
-		if (csDatabase.recordedDates.indexOf(item.date) < 0) {
-			csDatabase.recordedDates.push(item.date);
-		}
-
 		if (!csDatabase.attacksObject[csDatabase.attacksID]) {
-			csDatabase.attacksObject[csDatabase.attacksID] = [];
+			csDatabase.attacksObject[csDatabase.attacksID] = item;
 		}
 
-		csDatabase.attacksObject[csDatabase.attacksID].push(item);
+		if (!csDatabase.dateIDs[item.date]) {
+			csDatabase.dateIDs[item.date] = [];
+		}
+
+		csDatabase.dateIDs[item.date].push(csDatabase.attacksID);
 	}
 }

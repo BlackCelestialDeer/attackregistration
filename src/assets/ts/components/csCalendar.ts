@@ -26,18 +26,56 @@ export class csCalendar {
 	}
 
 	public addAttack(target: HTMLDivElement): void {
+		if (target.childElementCount > 2) {
+			return;
+		}
+
 		const span = document.createElement("span");
 		span.classList.add("cs-attack-item");
 		span.id = `attacksID${csDatabase.attacksID}`;
-		span.textContent = `attacksID${csDatabase.attacksID}`;
 
-		target.appendChild(span);
+		const typeAttack =
+			csDatabase.attacksObject[csDatabase.attacksID].cluster_attack === "Ja" ? "Cluster" : "Enkelvoudig";
+		span.textContent = typeAttack;
+		span.classList.add(`${typeAttack === "Cluster" ? "cs-cluster-attack" : "cs-single-attack"}`);
 
 		span.addEventListener("click", (e: Event) => {
-			console.log(span);
 			new csModal().showFilledIn(parseInt(span.id.replace(/attacksID/g, "")));
 			e.preventDefault();
 		});
+
+		if (target.childElementCount < 2) {
+			target.appendChild(span);
+		} else if (target.childElementCount === 2) {
+			const targetDate = <string>target.getAttribute("data-date");
+
+			target.appendChild(this.addShowMoreButton(targetDate));
+		}
+
+		return;
+	}
+
+	private addShowMoreButton(date: string): HTMLDivElement {
+		const container = document.createElement("div");
+		container.classList.add("cs-attack-item", "cs-show-more-attacks");
+		container.setAttribute("data-date", date);
+
+		const icon = document.createElement("span");
+		icon.classList.add("cs-icon", "material-symbols-outlined");
+		icon.textContent = " add ";
+
+		const text = document.createElement("span");
+		text.textContent = "Meer";
+
+		container.addEventListener("click", () => {
+			console.log(date);
+			console.log(csDatabase.dateIDs[date]);
+		});
+
+		container.appendChild(icon);
+		container.appendChild(text);
+
+		return container;
 	}
 
 	private setMonthButtons(): void {
@@ -135,13 +173,13 @@ export class csCalendar {
 		addButton.classList.add("cs-cell-add-button", "material-symbols-outlined");
 		addButton.textContent = "add";
 		this.setAddButtonsListener(addButton);
-		addButton.setAttribute("data-date", fullDate.toString());
+		addButton.setAttribute("data-date", fullDate.toDateString());
 
 		topRow.appendChild(dayNumber);
 		topRow.appendChild(addButton);
 
 		const contentContainer = document.createElement("div");
-		contentContainer.setAttribute("data-date", fullDate.toString());
+		contentContainer.setAttribute("data-date", fullDate.toDateString());
 		contentContainer.classList.add("cs-cell-content-container");
 
 		container.appendChild(topRow);
@@ -156,7 +194,6 @@ export class csCalendar {
 		button.addEventListener("click", () => {
 			modalClass.setState(true);
 			modalClass.setDate(<string>button.getAttribute("data-date"));
-			console.log(button.getAttribute("data-date"));
 		});
 	}
 }

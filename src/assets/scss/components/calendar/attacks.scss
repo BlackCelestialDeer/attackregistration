@@ -1,3 +1,5 @@
+@use "../../utilities/elevation.scss" as *;
+
 .cs-cell-content-container {
 	display: flex;
 	flex-direction: column;
@@ -5,8 +7,43 @@
 
 	.cs-attack-item {
 		display: flex;
+		align-items: center;
+		justify-content: center;
 		flex: 1;
-		margin: 4px;
-		background-color: var(--cs-color-primary);
+		margin: 2px 0;
+		min-height: 24px;
+		border-radius: 4px;
+		@include material-elevation(1);
+
+		cursor: pointer;
+
+		&.cs-single-attack {
+			background-color: var(--cs-color-success-light);
+
+			&:hover {
+				background-color: var(--cs-color-success);
+			}
+		}
+
+		&.cs-cluster-attack {
+			background-color: var(--cs-color-info-light);
+
+			&:hover {
+				background-color: var(--cs-color-info);
+			}
+		}
+
+		&.cs-show-more-attacks {
+			background-color: var(--cs-color-minor);
+
+			&:hover {
+				background-color: var(--cs-color-minor-dark);
+			}
+		}
+
+		&.cs-single-attack:hover,
+		&.cs-cluster-attack:hover {
+			// text-decoration: underline;
+		}
 	}
 }

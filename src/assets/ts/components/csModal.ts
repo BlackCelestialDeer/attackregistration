@@ -61,13 +61,10 @@ export class csModal {
 	}
 
 	public showFilledIn(id: number): void {
-		console.log("showFilledIn");
-		console.log(csDatabase.attacksObject);
-
 		this.setState(true);
 		this.modalContainer.classList.add("cs-modal-show-data");
 
-		const data: IAttackEntry = csDatabase.attacksObject[id][0];
+		const data: IAttackEntry = csDatabase.attacksObject[id];
 
 		const keyList: (keyof IAttackEntry)[] = [
 			"type_attack",
@@ -91,8 +88,6 @@ export class csModal {
 			const outputElem = this.modalContentForm.querySelector<HTMLDivElement>(`.cs-modal-output.${key}`);
 			if (outputElem) outputElem.textContent = data[key];
 		}
-
-		console.log(data);
 	}
 	private setControls(): void {
 		this.backButton.addEventListener("click", () => {
@@ -104,7 +99,7 @@ export class csModal {
 			this.setState(false);
 
 			const targetContentContainer = <HTMLDivElement>(
-				document.querySelector(`.cs-cell-content-container[data-date="${csModal.currentDate}"]`)
+				document.querySelector(`.cs-cell-content-container[data-date="${csModal.currentDate.toDateString()}"]`)
 			);
 
 			new csCalendar().addAttack(targetContentContainer);

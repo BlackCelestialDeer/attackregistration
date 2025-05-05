@@ -1,4 +1,5 @@
 @use "../../utilities/mixins.scss" as *;
+@use "../../utilities/elevation.scss" as *;
 
 .cs-calendar-table {
 	.cs-cell-top-row {
@@ -31,6 +32,8 @@
 				color: var(--cs-color-semi-black);
 				border: 1px solid var(--cs-color-primary);
 				border-radius: 50%;
+
+				@include material-elevation(3);
 
 				&:hover {
 					cursor: pointer;

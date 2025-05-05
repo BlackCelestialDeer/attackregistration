@@ -46,7 +46,7 @@ export class csModal {
 			}
 
 			// reset showFilledIn
-			this.modalContentForm.classList.remove("cs-modal-show-data");
+			this.modalContainer.classList.remove("cs-modal-show-data");
 			for (const elem of this.modalContentForm.querySelectorAll(".cs-modal-output")) {
 				elem.textContent = "";
 			}
@@ -65,7 +65,7 @@ export class csModal {
 		console.log(csDatabase.attacksObject);
 
 		this.setState(true);
-		this.modalContentForm.classList.add("cs-modal-show-data");
+		this.modalContainer.classList.add("cs-modal-show-data");
 
 		const data: IAttackEntry = csDatabase.attacksObject[id][0];
 

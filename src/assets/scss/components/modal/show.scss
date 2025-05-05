@@ -1,15 +1,25 @@
-.cs-modal-content.cs-modal-show-data {
-	.cs-modal-input {
+.cs-modal-show-data {
+	.cs-modal-content {
+		.cs-modal-input {
+			display: none;
+		}
+
+		.cs-modal-item {
+			justify-content: space-between;
+
+			.cs-modal-output {
+				display: flex;
+				flex: 1;
+				max-width: 25%;
+			}
+		}
+	}
+
+	.cs-modal-button-save {
 		display: none;
 	}
 
-	.cs-modal-item {
-		justify-content: space-between;
-
-		.cs-modal-output {
-			display: flex;
-			flex: 1;
-			max-width: 25%;
-		}
+	.cs-modal-button-edit {
+		display: flex !important;
 	}
 }

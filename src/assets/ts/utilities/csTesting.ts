@@ -14,7 +14,7 @@ export class csTesting {
 		const data = typedData.default;
 
 		for (const [key, item] of Object.entries(data)) {
-			console.log(key);
+			console.log(key, item);
 			const targetContentContainer = <HTMLDivElement>(
 				document.querySelector(`.cs-cell-content-container[data-date="${item.date}"]`)
 			);
@@ -23,5 +23,7 @@ export class csTesting {
 
 			new csCalendar().addAttack(targetContentContainer);
 		}
+
+		console.log(csDatabase.attacksObject);
 	}
 }

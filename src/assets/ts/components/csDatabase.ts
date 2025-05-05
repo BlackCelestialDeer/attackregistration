@@ -8,7 +8,5 @@ export class csDatabase {
 		if (!csDatabase.attacksObject[csDatabase.attacksID]) {
 			csDatabase.attacksObject[csDatabase.attacksID] = item;
 		}
-
-		console.log(csDatabase.attacksObject);
 	}
 }

@@ -2,8 +2,11 @@
 	"compilerOptions": {
 		"target": "ES6",
 		"module": "ESNext",
+		"moduleResolution": "node",
 		"outDir": "dist",
-		"strict": true
+		"strict": true,
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true // Add this line
 	},
 	"include": ["src/assets/ts/**/*"]
 }

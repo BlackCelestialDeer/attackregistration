@@ -48,7 +48,7 @@ export class csCalendar {
 			span.classList.add("cs-hidden-attack");
 
 			// update show more button
-			const elem = <HTMLSpanElement>target.querySelector(".cs-show-more-attacks");
+			const elem = <HTMLSpanElement>target.querySelector(".cs-show-more-attacks .cs-show-more-text");
 			elem.textContent = `+${target.childElementCount - 2}`;
 		}
 
@@ -58,18 +58,39 @@ export class csCalendar {
 	}
 
 	private addShowMoreButton(date: string, parent: HTMLDivElement): HTMLDivElement {
+		console.log("flag");
 		const container = document.createElement("div");
 		container.classList.add("cs-attack-item", "cs-show-more-attacks");
 		container.setAttribute("data-date", date);
 
 		const text = document.createElement("span");
+		text.classList.add("cs-show-more-text");
 		text.textContent = "+1";
 
+		const icon = document.createElement("span");
+		icon.classList.add("material-symbols-outlined", "cs-show-more-icon");
+		icon.textContent = " keyboard_arrow_down ";
+
 		container.addEventListener("click", () => {
-			parent.classList.add("cs-show-all-attacks");
+			const state = parent.classList.contains("cs-show-all-attacks");
+
+			// close all others
+			if (!state) {
+				console.log("flag");
+				for (const elem of document.querySelectorAll(".cs-show-all-attacks")) {
+					if (elem !== parent) {
+						elem.classList.remove("cs-show-all-attacks");
+						elem.querySelector("");
+					}
+				}
+			}
+
+			parent.classList.toggle("cs-show-all-attacks", !state);
+			icon.textContent = state ? " keyboard_arrow_down " : " keyboard_arrow_up ";
 		});
 
 		container.appendChild(text);
+		container.appendChild(icon);
 
 		return container;
 	}

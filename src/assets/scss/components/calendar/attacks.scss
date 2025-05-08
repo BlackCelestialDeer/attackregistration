@@ -55,12 +55,24 @@
 		position: absolute;
 		width: $cell-size-w;
 		height: auto;
+		background-color: var(--cs-color-white);
+		padding: 16px;
+		max-height: unset;
+
+		transition: 125ms ease;
+
+		@include material-elevation(3);
 
 		.cs-attack-item {
 			min-height: 48px;
 
 			&.cs-show-more-attacks {
-				display: none;
+				order: 2;
+				min-height: 24px;
+
+				.cs-show-more-text {
+					display: none;
+				}
 			}
 
 			&.cs-hidden-attack {

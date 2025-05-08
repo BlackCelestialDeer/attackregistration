@@ -132,8 +132,13 @@ export class csCalendar {
 		let row = document.createElement("tr");
 		tbody.appendChild(row);
 
-		for (let i = 0; i < firstDayOfMonth; i++) {
-			row.appendChild(document.createElement("td"));
+		const prevMonthLastDate = new Date(year, month, 0).getDate();
+		for (let i = firstDayOfMonth - 1; i >= 0; i--) {
+			const prevDate = new Date(year, month - 1, prevMonthLastDate - i);
+			const td = document.createElement("td");
+			td.classList.add("cs-table-content-cell", "cs-outside-month");
+			td.appendChild(this.addCellContents(prevDate.getDate(), prevDate));
+			row.appendChild(td);
 		}
 
 		for (let day = 1; day <= daysInMonth; day++) {
@@ -149,8 +154,15 @@ export class csCalendar {
 			row.appendChild(td);
 		}
 
+		// Fill end of last row with next month days
+		let nextMonthDay = 1;
 		while (row.children.length < 7) {
-			row.appendChild(document.createElement("td"));
+			const nextDate = new Date(year, month + 1, nextMonthDay);
+			const td = document.createElement("td");
+			td.classList.add("cs-table-content-cell", "cs-outside-month");
+			td.appendChild(this.addCellContents(nextMonthDay, nextDate));
+			row.appendChild(td);
+			nextMonthDay++;
 		}
 	}
 

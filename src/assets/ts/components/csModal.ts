@@ -9,6 +9,7 @@ export class csModal {
 	private dateSpan: HTMLSpanElement;
 	private backButton: HTMLDivElement;
 	private saveButton: HTMLDivElement;
+	private nextButton: HTMLDivElement;
 	private modalContentForm: HTMLFormElement;
 
 	private static currentDate: Date;
@@ -22,6 +23,7 @@ export class csModal {
 		this.dateSpan = this.modalContainer.querySelector(".cs-modal-date .cs-modal-date-day") as HTMLSpanElement;
 		this.backButton = <HTMLDivElement>this.modalContainer.querySelector("#csModalButtonBack");
 		this.saveButton = <HTMLDivElement>this.modalContainer.querySelector("#csModalButtonSave");
+		this.nextButton = <HTMLDivElement>this.modalContainer.querySelector("#csModalButtonNext");
 		this.modalContentForm = <HTMLFormElement>this.modalContainer.querySelector(".cs-modal-content");
 	}
 
@@ -38,7 +40,7 @@ export class csModal {
 
 			// reset conditional questions
 			const conditionalQuestions = this.modalContentForm.querySelectorAll(
-				".cs-modal-item.cs-modal-effect-medication, .cs-modal-item.cs-modal-cluster-amount"
+				".cs-modal-item.cs-modal-effect-medication"
 			);
 
 			for (const elem of conditionalQuestions) {
@@ -81,7 +83,6 @@ export class csModal {
 			if (element) element.classList.toggle("cs-hidden", condition);
 		};
 
-		toggleVisibility("attack_count", data.cluster_attack !== "Ja");
 		toggleVisibility("effect_medication", data.took_medication !== "Ja");
 
 		for (const key of keyList) {
@@ -91,7 +92,13 @@ export class csModal {
 	}
 	private setControls(): void {
 		this.backButton.addEventListener("click", () => {
-			this.setState(false);
+			if (this.modalContainer.classList.contains("first-page")) {
+				this.setState(false);
+
+			} else if (this.modalContainer.classList.contains("second-page")) {
+				this.modalContainer.classList.remove("second-page");
+				this.modalContainer.classList.add("first-page");
+			}
 		});
 
 		this.saveButton.addEventListener("click", () => {
@@ -103,11 +110,20 @@ export class csModal {
 			);
 
 			new csCalendar().addAttack(targetContentContainer);
+
+			this.modalContainer.classList.remove("second-page");
+			this.modalContainer.classList.add("first-page");
 		});
+
 		this.modalContentForm.addEventListener("keydown", (e: KeyboardEvent) => {
 			if (e.key === "13") {
 				e.preventDefault();
 			}
+		});
+
+		this.nextButton.addEventListener("click", () => {
+			this.modalContainer.classList.toggle("first-page");
+			this.modalContainer.classList.toggle("second-page");
 		});
 	}
 

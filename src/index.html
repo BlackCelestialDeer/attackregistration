@@ -23,13 +23,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="cs-modal cs-hidden">
+			<div class="cs-modal cs-hidden first-page">
 				<form class="cs-modal-content">
 					<div class="cs-modal-date">
 						<span class="cs-modal-date-weekday"></span>
 						<span class="cs-modal-date-day"></span>
 					</div>
-					<div class="cs-modal-item cs-modal-attack-type type_attack">
+					<div class="cs-modal-item cs-modal-attack-type type_attack first-page-element">
 						<label class="cs-modal-label" for="type_attack">Type aanval:</label>
 						<div class="cs-modal-input">
 							<select name="type_attack">
@@ -40,7 +40,17 @@
 						</div>
 						<div class="cs-modal-output cs-modal-attack-type type_attack"></div>
 					</div>
-					<div class="cs-modal-item cs-modal-cluster cluster_attack">
+					<div
+						id="csAttackCountContainer"
+						class="cs-modal-item cs-modal-cluster-amount attack_count first-page-element"
+					>
+						<span class="cs-modal-label">Aantal aanvallen: </span>
+						<div class="cs-modal-input">
+							<input type="number" id="attack_count" name="attack_count" min="1" />
+						</div>
+						<div class="cs-modal-output cs-modal-cluster-amount attack_count"></div>
+					</div>
+					<div class="cs-modal-item cs-modal-cluster cluster_attack second-page-element">
 						<span class="cs-modal-label">Clusteraanval: </span>
 						<div class="cs-modal-input">
 							<input type="radio" id="option_yes_cluster" value="Ja" name="cluster_attack" />
@@ -50,17 +60,8 @@
 						</div>
 						<div class="cs-modal-output cs-modal-cluster cluster_attack"></div>
 					</div>
-					<div
-						id="csAttackCountContainer"
-						class="cs-modal-item cs-modal-cluster-amount cs-hidden attack_count"
-					>
-						<span class="cs-modal-label">Aantal aanvallen: </span>
-						<div class="cs-modal-input">
-							<input type="number" id="attack_count" name="attack_count" min="1" />
-						</div>
-						<div class="cs-modal-output cs-modal-cluster-amount attack_count"></div>
-					</div>
-					<div class="cs-modal-item cs-modal-medication took_medication">
+
+					<div class="cs-modal-item cs-modal-medication took_medication second-page-element">
 						<span class="cs-modal-label">Noodmedicatie:</span>
 						<div class="cs-modal-input">
 							<input type="radio" id="option_yes_medication" value="Ja" name="took_medication" />
@@ -87,14 +88,14 @@
 						</div>
 						<div class="cs-modal-output cs-modal-label effect_medication"></div>
 					</div>
-					<div class="cs-modal-item cs-modal-triggers triggers">
+					<div class="cs-modal-item cs-modal-triggers triggers second-page-element">
 						<label for="triggers" class="cs-modal-label">Triggers</label>
 						<div class="cs-modal-input">
 							<textarea type="text" name="triggers" rows="2" cols="30" wrap="hard"></textarea>
 						</div>
 						<div class="cs-modal-output cs-modal-triggers triggers"></div>
 					</div>
-					<div class="cs-modal-item cs-modal-prov-factors factors">
+					<div class="cs-modal-item cs-modal-prov-factors factors second-page-element">
 						<label for="factors" class="cs-modal-label">Provocerende factoren</label>
 						<div class="cs-modal-input">
 							<textarea type="text" name="factors" rows="2" cols="30" wrap="hard"></textarea>
@@ -107,9 +108,15 @@
 						<span class="material-symbols-outlined"> undo </span>
 						Terug
 					</div>
-					<div id="csModalButtonSave" class="cs-btn cs-btn-icon cs-modal-button-save">
+
+					<div id="csModalButtonSave" class="cs-btn cs-btn-icon cs-modal-button-save second-page-element">
 						<span class="material-symbols-outlined"> check </span>
 						Opslaan
+					</div>
+
+					<div id="csModalButtonNext" class="cs-btn cs-btn-icon cs-btn-icon-right cs-modal-button-save first-page-element">
+						<span class="material-symbols-outlined"> chevron_right </span>
+						Volgende
 					</div>
 
 					<div id="csModalButtonEdit" class="cs-btn cs-btn-icon cs-btn-outline cs-modal-button-edit">

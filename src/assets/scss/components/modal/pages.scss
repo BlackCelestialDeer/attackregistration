@@ -1,0 +1,9 @@
+.cs-modal:not(.cs-modal-show-data) {
+	&.first-page .second-page-element {
+		display: none;
+	}
+
+	&.second-page .first-page-element {
+		display: none;
+	}
+}

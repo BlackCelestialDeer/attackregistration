@@ -47,5 +47,13 @@
 		span {
 			margin-right: 4px;
 		}
+
+		&.cs-btn-icon-right {
+			flex-direction: row-reverse;
+
+			span {
+				margin-left: 4px;
+			}
+		}
 	}
 }

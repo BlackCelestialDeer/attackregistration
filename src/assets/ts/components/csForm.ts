@@ -3,19 +3,14 @@ import { csDatabase } from "./csDatabase";
 export class csForm {
 	private modalContentForm: HTMLFormElement;
 	private medicationRadioInputs: NodeListOf<HTMLInputElement>;
-	private clusterRadioInputs: NodeListOf<HTMLInputElement>;
-	private attackCount: HTMLDivElement;
 	private medicationEffect: HTMLDivElement;
 
 	constructor() {
 		this.modalContentForm = <HTMLFormElement>document.querySelector(".cs-modal .cs-modal-content");
-		this.clusterRadioInputs = <NodeListOf<HTMLInputElement>>(
-			this.modalContentForm.querySelectorAll('input[name="cluster_attack"]')
-		);
+		
 		this.medicationRadioInputs = <NodeListOf<HTMLInputElement>>(
 			this.modalContentForm.querySelectorAll('input[name="took_medication"]')
 		);
-		this.attackCount = <HTMLDivElement>this.modalContentForm.querySelector("#csAttackCountContainer");
 		this.medicationEffect = <HTMLDivElement>this.modalContentForm.querySelector("#csMedicationEffectContainer");
 	}
 
@@ -42,11 +37,6 @@ export class csForm {
 	}
 
 	private setupEventListeners(): void {
-		this.clusterRadioInputs.forEach((elem) => {
-			elem.addEventListener("change", () => {
-				this.attackCount.classList.toggle("cs-hidden", elem.value !== "Ja");
-			});
-		});
 
 		this.medicationRadioInputs.forEach((elem) => {
 			elem.addEventListener("change", () => {

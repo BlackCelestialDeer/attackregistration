@@ -1,662 +1,662 @@
 {
-	"0": {
-		"date": "Sun Jun 01 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "4",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Slaapgebrek, stress",
-		"factors": "Slecht geslapen"
-	},
-	"1": {
-		"date": "Sun Jun 01 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Meerdere eerdere \naanvallen",
-		"factors": "Stress"
-	},
-	"2": {
-		"date": "Mon Jun 30 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "Gedronken",
-		"factors": "Niets"
-	},
-	"3": {
-		"date": "Tue Jun 03 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Niets",
-		"triggers": "Hoofdpijn",
-		"factors": "x"
-	},
-	"4": {
-		"date": "Tue Jun 03 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Stress",
-		"factors": "TV kijken"
-	},
-	"5": {
-		"date": "Tue Jun 03 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Ja",
-		"effect_medication": "Niets",
-		"triggers": "Boos",
-		"factors": "TikTok"
-	},
-	"6": {
-		"date": "Tue Jun 03 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "X",
-		"factors": "X"
-	},
-	"7": {
-		"date": "Tue Jun 03 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "X",
-		"factors": "X"
-	},
-	"8": {
-		"date": "Wed Jun 04 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "x",
-		"factors": "x"
-	},
-	"9": {
-		"date": "Wed Jun 04 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "x",
-		"factors": "x"
-	},
-	"10": {
-		"date": "Wed Jun 04 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "x",
-		"factors": "x"
-	},
-	"11": {
-		"date": "Wed Jun 04 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "1",
-		"factors": "1"
-	},
-	"12": {
-		"date": "Wed Jun 04 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "1",
-		"factors": "1"
-	},
-	"13": {
-		"date": "Wed Jun 04 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "1",
-		"factors": "1"
-	},
-	"14": {
-		"date": "Wed Jun 04 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Ja",
-		"effect_medication": "toppie",
-		"triggers": "2",
-		"factors": "2"
-	},
-	"15": {
-		"date": "Wed Jun 04 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "2",
-		"factors": "2"
-	},
-	"16": {
-		"date": "Thu Jun 05 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Beetje",
-		"triggers": "Weinig gegeten",
-		"factors": "Lunch gemist"
-	},
-	"17": {
-		"date": "Thu Jun 05 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "3",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Slaapgebrek, werkstress",
-		"factors": "Laat naar bed"
-	},
-	"18": {
-		"date": "Sat Jun 07 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "3",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Boosheid",
-		"factors": "Discussie met collega"
-	},
-	"19": {
-		"date": "Sat Jun 07 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "Onregelmatig ritme",
-		"factors": "Vergeten te eten"
-	},
-	"20": {
-		"date": "Sat Jun 07 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "2",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Vermoeidheid",
-		"factors": "Lang gewerkt"
-	},
-	"21": {
-		"date": "Sun Jun 08 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "3",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Stress",
-		"factors": "Project deadline"
-	},
-	"22": {
-		"date": "Mon Jun 09 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Matig",
-		"triggers": "Weinig slaap",
-		"factors": "Nacht gewerkt"
-	},
-	"23": {
-		"date": "Mon Jun 09 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "2",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "Gedronken",
-		"factors": "Niets"
-	},
-	"24": {
-		"date": "Tue Jun 10 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Honger",
-		"factors": "Vergeten te eten"
-	},
-	"25": {
-		"date": "Tue Jun 10 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Verlies van focus",
-		"factors": "Lang zitten"
-	},
-	"26": {
-		"date": "Wed Jun 11 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Angst",
-		"factors": "Onzekerheid"
-	},
-	"27": {
-		"date": "Wed Jun 11 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "2",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Werken onder druk",
-		"factors": "Tijdgebrek"
-	},
-	"28": {
-		"date": "Thu Jun 12 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Slecht nieuws",
-		"factors": "Discussie"
-	},
-	"29": {
-		"date": "Thu Jun 12 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "2",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "Onverwachte situatie",
-		"factors": "Verlies van controle"
-	},
-	"30": {
-		"date": "Fri Jun 13 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "3",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Te veel stress",
-		"factors": "Werkdruk"
-	},
-	"31": {
-		"date": "Mon Jun 09 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Ja",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "1",
-		"triggers": "2",
-		"factors": "3"
-	},
-	"32": {
-		"date": "Thu Jun 12 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "1",
-		"factors": "1"
-	},
-	"33": {
-		"date": "Thu Jun 12 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "1",
-		"factors": "1"
-	},
-	"34": {
-		"date": "Sun Jun 15 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "4",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Slaapgebrek, stress",
-		"factors": "Slecht geslapen"
-	},
-	"35": {
-		"date": "Sun Jun 15 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Meerdere eerdere \naanvallen",
-		"factors": "Stress"
-	},
-	"36": {
-		"date": "Mon Jun 16 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "Gedronken",
-		"factors": "Niets"
-	},
-	"37": {
-		"date": "Tue Jun 17 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Niets",
-		"triggers": "Hoofdpijn",
-		"factors": "x"
-	},
-	"38": {
-		"date": "Tue Jun 17 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Stress",
-		"factors": "TV kijken"
-	},
-	"39": {
-		"date": "Tue Jun 17 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Ja",
-		"effect_medication": "Niets",
-		"triggers": "Boos",
-		"factors": "TikTok"
-	},
-	"40": {
-		"date": "Tue Jun 17 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "X",
-		"factors": "X"
-	},
-	"41": {
-		"date": "Thu Jun 19 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "X",
-		"factors": "X"
-	},
-	"42": {
-		"date": "Fri Jun 20 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "x",
-		"factors": "x"
-	},
-	"43": {
-		"date": "Fri Jun 20 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "x",
-		"factors": "x"
-	},
-	"44": {
-		"date": "Fri Jun 20 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "x",
-		"factors": "x"
-	},
-	"45": {
-		"date": "Fri Jun 20 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "1",
-		"factors": "1"
-	},
-	"46": {
-		"date": "Fri Jun 20 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "1",
-		"factors": "1"
-	},
-	"47": {
-		"date": "Fri Jun 20 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "1",
-		"factors": "1"
-	},
-	"48": {
-		"date": "Fri Jun 20 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Ja",
-		"effect_medication": "toppie",
-		"triggers": "2",
-		"factors": "2"
-	},
-	"49": {
-		"date": "Fri Jun 20 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "2",
-		"factors": "2"
-	},
-	"50": {
-		"date": "Sat Jun 21 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Beetje",
-		"triggers": "Weinig gegeten",
-		"factors": "Lunch gemist"
-	},
-	"51": {
-		"date": "Sat Jun 21 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "3",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Slaapgebrek, werkstress",
-		"factors": "Laat naar bed"
-	},
-	"52": {
-		"date": "Sun Jun 22 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "3",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Boosheid",
-		"factors": "Discussie met collega"
-	},
-	"53": {
-		"date": "Sun Jun 22 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "Onregelmatig ritme",
-		"factors": "Vergeten te eten"
-	},
-	"54": {
-		"date": "Sun Jun 22 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "2",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Vermoeidheid",
-		"factors": "Lang gewerkt"
-	},
-	"55": {
-		"date": "Mon Jun 23 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "3",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Stress",
-		"factors": "Project deadline"
-	},
-	"56": {
-		"date": "Tue Jun 24 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Matig",
-		"triggers": "Weinig slaap",
-		"factors": "Nacht gewerkt"
-	},
-	"57": {
-		"date": "Tue Jun 24 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Nee",
-		"attack_count": "2",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "Gedronken",
-		"factors": "Niets"
-	},
-	"58": {
-		"date": "Wed Jun 25 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "2",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Honger",
-		"factors": "Vergeten te eten"
-	},
-	"59": {
-		"date": "Wed Jun 25 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Nee",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Verlies van focus",
-		"factors": "Lang zitten"
-	},
-	"60": {
-		"date": "Thu Jun 26 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Ja",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Angst",
-		"factors": "Onzekerheid"
-	},
-	"61": {
-		"date": "Thu Jun 26 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "2",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Werken onder druk",
-		"factors": "Tijdgebrek"
-	},
-	"62": {
-		"date": "Fri Jun 27 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "1",
-		"took_medication": "Nee",
-		"effect_medication": "",
-		"triggers": "Slecht nieuws",
-		"factors": "Discussie"
-	},
-	"63": {
-		"date": "Fri Jun 27 2025",
-		"type_attack": "Optie 1",
-		"cluster_attack": "Nee",
-		"attack_count": "2",
-		"took_medication": "Onbekend",
-		"effect_medication": "",
-		"triggers": "Onverwachte situatie",
-		"factors": "Verlies van controle"
-	},
-	"64": {
-		"date": "Sat Jun 28 2025",
-		"type_attack": "Optie 2",
-		"cluster_attack": "Ja",
-		"attack_count": "3",
-		"took_medication": "Ja",
-		"effect_medication": "Goed",
-		"triggers": "Te veel stress",
-		"factors": "Werkdruk"
-	},
-	"65": {
-		"date": "Sun Jun 29 2025",
-		"type_attack": "X - Nader te bepalen",
-		"cluster_attack": "Ja",
-		"attack_count": "1",
-		"took_medication": "Ja",
-		"effect_medication": "1",
-		"triggers": "2",
-		"factors": "3"
-	}
+    "0": {
+        "date": "Sat Nov 01 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "4",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Slaapgebrek, stress",
+        "factors": "Slecht geslapen"
+    },
+    "1": {
+        "date": "Sat Nov 01 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Meerdere eerdere \naanvallen",
+        "factors": "Stress"
+    },
+    "2": {
+        "date": "Sun Nov 30 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "Gedronken",
+        "factors": "Niets"
+    },
+    "3": {
+        "date": "Mon Nov 03 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Niets",
+        "triggers": "Hoofdpijn",
+        "factors": "x"
+    },
+    "4": {
+        "date": "Mon Nov 03 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Stress",
+        "factors": "TV kijken"
+    },
+    "5": {
+        "date": "Mon Nov 03 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Ja",
+        "effect_medication": "Niets",
+        "triggers": "Boos",
+        "factors": "TikTok"
+    },
+    "6": {
+        "date": "Mon Nov 03 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "X",
+        "factors": "X"
+    },
+    "7": {
+        "date": "Mon Nov 03 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "X",
+        "factors": "X"
+    },
+    "8": {
+        "date": "Tue Nov 04 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "x",
+        "factors": "x"
+    },
+    "9": {
+        "date": "Tue Nov 04 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "x",
+        "factors": "x"
+    },
+    "10": {
+        "date": "Tue Nov 04 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "x",
+        "factors": "x"
+    },
+    "11": {
+        "date": "Tue Nov 04 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "1",
+        "factors": "1"
+    },
+    "12": {
+        "date": "Tue Nov 04 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "1",
+        "factors": "1"
+    },
+    "13": {
+        "date": "Tue Nov 04 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "1",
+        "factors": "1"
+    },
+    "14": {
+        "date": "Tue Nov 04 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Ja",
+        "effect_medication": "toppie",
+        "triggers": "2",
+        "factors": "2"
+    },
+    "15": {
+        "date": "Tue Nov 04 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "2",
+        "factors": "2"
+    },
+    "16": {
+        "date": "Wed Nov 05 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Beetje",
+        "triggers": "Weinig gegeten",
+        "factors": "Lunch gemist"
+    },
+    "17": {
+        "date": "Wed Nov 05 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "3",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Slaapgebrek, werkstress",
+        "factors": "Laat naar bed"
+    },
+    "18": {
+        "date": "Fri Nov 07 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "3",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Boosheid",
+        "factors": "Discussie met collega"
+    },
+    "19": {
+        "date": "Fri Nov 07 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "Onregelmatig ritme",
+        "factors": "Vergeten te eten"
+    },
+    "20": {
+        "date": "Fri Nov 07 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "2",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Vermoeidheid",
+        "factors": "Lang gewerkt"
+    },
+    "21": {
+        "date": "Sat Nov 08 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "3",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Stress",
+        "factors": "Project deadline"
+    },
+    "22": {
+        "date": "Sun Nov 09 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Matig",
+        "triggers": "Weinig slaap",
+        "factors": "Nacht gewerkt"
+    },
+    "23": {
+        "date": "Sun Nov 09 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "2",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "Gedronken",
+        "factors": "Niets"
+    },
+    "24": {
+        "date": "Mon Nov 10 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Honger",
+        "factors": "Vergeten te eten"
+    },
+    "25": {
+        "date": "Mon Nov 10 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Verlies van focus",
+        "factors": "Lang zitten"
+    },
+    "26": {
+        "date": "Tue Nov 11 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Angst",
+        "factors": "Onzekerheid"
+    },
+    "27": {
+        "date": "Tue Nov 11 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "2",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Werken onder druk",
+        "factors": "Tijdgebrek"
+    },
+    "28": {
+        "date": "Wed Nov 12 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Slecht nieuws",
+        "factors": "Discussie"
+    },
+    "29": {
+        "date": "Wed Nov 12 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "2",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "Onverwachte situatie",
+        "factors": "Verlies van controle"
+    },
+    "30": {
+        "date": "Thu Nov 13 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "3",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Te veel stress",
+        "factors": "Werkdruk"
+    },
+    "31": {
+        "date": "Sun Nov 09 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Ja",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "1",
+        "triggers": "2",
+        "factors": "3"
+    },
+    "32": {
+        "date": "Wed Nov 12 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "1",
+        "factors": "1"
+    },
+    "33": {
+        "date": "Wed Nov 12 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "1",
+        "factors": "1"
+    },
+    "34": {
+        "date": "Sat Nov 15 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "4",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Slaapgebrek, stress",
+        "factors": "Slecht geslapen"
+    },
+    "35": {
+        "date": "Sat Nov 15 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Meerdere eerdere \naanvallen",
+        "factors": "Stress"
+    },
+    "36": {
+        "date": "Sun Nov 16 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "Gedronken",
+        "factors": "Niets"
+    },
+    "37": {
+        "date": "Mon Nov 17 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Niets",
+        "triggers": "Hoofdpijn",
+        "factors": "x"
+    },
+    "38": {
+        "date": "Mon Nov 17 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Stress",
+        "factors": "TV kijken"
+    },
+    "39": {
+        "date": "Mon Nov 17 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Ja",
+        "effect_medication": "Niets",
+        "triggers": "Boos",
+        "factors": "TikTok"
+    },
+    "40": {
+        "date": "Mon Nov 17 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "X",
+        "factors": "X"
+    },
+    "41": {
+        "date": "Wed Nov 19 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "X",
+        "factors": "X"
+    },
+    "42": {
+        "date": "Thu Nov 20 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "x",
+        "factors": "x"
+    },
+    "43": {
+        "date": "Thu Nov 20 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "x",
+        "factors": "x"
+    },
+    "44": {
+        "date": "Thu Nov 20 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "x",
+        "factors": "x"
+    },
+    "45": {
+        "date": "Thu Nov 20 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "1",
+        "factors": "1"
+    },
+    "46": {
+        "date": "Thu Nov 20 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "1",
+        "factors": "1"
+    },
+    "47": {
+        "date": "Thu Nov 20 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "1",
+        "factors": "1"
+    },
+    "48": {
+        "date": "Thu Nov 20 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Ja",
+        "effect_medication": "toppie",
+        "triggers": "2",
+        "factors": "2"
+    },
+    "49": {
+        "date": "Thu Nov 20 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "2",
+        "factors": "2"
+    },
+    "50": {
+        "date": "Fri Nov 21 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Beetje",
+        "triggers": "Weinig gegeten",
+        "factors": "Lunch gemist"
+    },
+    "51": {
+        "date": "Fri Nov 21 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "3",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Slaapgebrek, werkstress",
+        "factors": "Laat naar bed"
+    },
+    "52": {
+        "date": "Sat Nov 22 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "3",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Boosheid",
+        "factors": "Discussie met collega"
+    },
+    "53": {
+        "date": "Sat Nov 22 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "Onregelmatig ritme",
+        "factors": "Vergeten te eten"
+    },
+    "54": {
+        "date": "Sat Nov 22 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "2",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Vermoeidheid",
+        "factors": "Lang gewerkt"
+    },
+    "55": {
+        "date": "Sun Nov 23 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "3",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Stress",
+        "factors": "Project deadline"
+    },
+    "56": {
+        "date": "Mon Nov 24 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Matig",
+        "triggers": "Weinig slaap",
+        "factors": "Nacht gewerkt"
+    },
+    "57": {
+        "date": "Mon Nov 24 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Nee",
+        "attack_count": "2",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "Gedronken",
+        "factors": "Niets"
+    },
+    "58": {
+        "date": "Tue Nov 25 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "2",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Honger",
+        "factors": "Vergeten te eten"
+    },
+    "59": {
+        "date": "Tue Nov 25 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Nee",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Verlies van focus",
+        "factors": "Lang zitten"
+    },
+    "60": {
+        "date": "Wed Nov 26 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Ja",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Angst",
+        "factors": "Onzekerheid"
+    },
+    "61": {
+        "date": "Wed Nov 26 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "2",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Werken onder druk",
+        "factors": "Tijdgebrek"
+    },
+    "62": {
+        "date": "Thu Nov 27 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "1",
+        "took_medication": "Nee",
+        "effect_medication": "",
+        "triggers": "Slecht nieuws",
+        "factors": "Discussie"
+    },
+    "63": {
+        "date": "Thu Nov 27 2025",
+        "type_attack": "Optie 1",
+        "cluster_attack": "Nee",
+        "attack_count": "2",
+        "took_medication": "Onbekend",
+        "effect_medication": "",
+        "triggers": "Onverwachte situatie",
+        "factors": "Verlies van controle"
+    },
+    "64": {
+        "date": "Fri Nov 28 2025",
+        "type_attack": "Optie 2",
+        "cluster_attack": "Ja",
+        "attack_count": "3",
+        "took_medication": "Ja",
+        "effect_medication": "Goed",
+        "triggers": "Te veel stress",
+        "factors": "Werkdruk"
+    },
+    "65": {
+        "date": "Sat Nov 29 2025",
+        "type_attack": "X - Nader te bepalen",
+        "cluster_attack": "Ja",
+        "attack_count": "1",
+        "took_medication": "Ja",
+        "effect_medication": "1",
+        "triggers": "2",
+        "factors": "3"
+    }
 }
